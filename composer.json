@@ -1,0 +1,10 @@
+{
+    "name": "derickpayne/svgplus",
+    "description": "A WordPress plugin to securely upload and display SVG files.",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "stable",
+    "require": {
+        "enshrined/svg-sanitize": "^0.20.0"
+    }
+}

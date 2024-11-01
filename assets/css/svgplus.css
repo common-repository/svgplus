@@ -1,0 +1,26 @@
+.svgplus-widget {
+    display: block !important; /* Ensure it is displayed */
+    width: 100%; /* Adjust as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Animation on hover */
+.svgplus-animate-hover img {
+    transition: transform 0.3s ease;
+}
+
+.svgplus-animate-hover:hover img {
+    transform: scale(1.1);
+}
+
+/* Looping animation */
+.svgplus-animate-loop img {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Additional custom CSS can be added via settings */

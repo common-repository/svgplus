@@ -1,0 +1,191 @@
+/* Style for the SVGPlus settings icon */
+.svgplus-settings-icon {
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 64px; /* Increased width */
+    height: 64px; /* Increased height */
+}
+
+/* Title (h1) spacing adjustments */
+.wrap h1 {
+    display: flex;
+    align-items: center; /* Align the icon and text vertically */
+    margin-bottom: 20px; /* Add space between title and main settings */
+}
+
+/* Container for the switch */
+.svgplus-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+/* Hide the default checkbox */
+.svgplus-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.svgplus-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* The slider before the toggle */
+.svgplus-slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* When the checkbox is checked */
+.svgplus-switch input:checked + .svgplus-slider {
+    background-color: #2196F3;
+}
+
+/* Move the slider when checked */
+.svgplus-switch input:checked + .svgplus-slider:before {
+    transform: translateX(20px);
+}
+
+/* Add focus effect */
+.svgplus-switch input:focus + .svgplus-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+/* Modified section starts here */
+/* Change background to orange only when switch is checked and has orange-background class */
+.svgplus-switch input:checked + .svgplus-slider.orange-background {
+    background-color: orange !important;
+}
+/* Modified section ends here */
+
+/* Label styling */
+.svgplus-label {
+    vertical-align: middle;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+/* Wrapper for switch and label to add spacing */
+.svgplus-switch-wrapper {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Main Settings section */
+.svgplus-main-settings {
+    background-color: #fff;  /* White background */
+    padding: 20px;  /* Added padding for spacing */
+    border-radius: 8px;  /* Optional: Rounded corners for better aesthetics */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Optional: Subtle shadow for depth */
+    margin-top: 20px; /* Added margin to create space between title and settings section */
+}
+
+/* Custom CSS section with similar style to Main Settings */
+.svgplus-custom-css-settings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Custom CSS codebox full width */
+.svgplus-custom-css-settings textarea {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Hide the Custom CSS label specifically */
+.svgplus-custom-css-settings .form-table th {
+    display: none;
+}
+
+/* Notification styles for the Custom CSS section */
+.svgplus-notification {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.svgplus-notification.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.svgplus-notification.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Style for the CodeMirror editor */
+.CodeMirror {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    height: auto;
+    min-height: 200px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .svgplus-switch {
+        width: 35px;
+        height: 18px;
+    }
+
+    .svgplus-slider:before {
+        height: 12px;
+        width: 12px;
+        left: 3px;
+        bottom: 3px;
+    }
+
+    .svgplus-switch input:checked + .svgplus-slider:before {
+        transform: translateX(17px);
+    }
+
+    .svgplus-label {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    .svgplus-settings-icon {
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+    }
+
+    .svgplus-switch-wrapper {
+        margin-right: 10px;
+    }
+
+    .CodeMirror {
+        font-size: 12px;
+        min-height: 150px;
+    }
+}
